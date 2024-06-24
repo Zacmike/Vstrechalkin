@@ -43,7 +43,7 @@ bot.launch();
 const checkMeetings = async () => {
     try {
         // Настройка прокси для подключения через испанский IP-адрес
-        const proxy = 'https://icp.administracionelectronica.gob.es/icpplus/index.html'; // Замените на реальный адрес и порт испанского прокси
+        const proxy = 'http://172.233.123.157:8000/'; // Замените на реальный адрес и порт испанского прокси
         const agent = new HttpsProxyAgent(proxy);
 
         const response = await fetch(config.TARGET_URL, { agent });
