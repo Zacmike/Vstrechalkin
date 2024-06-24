@@ -1,4 +1,5 @@
 const fetch = require('node-fetch');
+const HttpsProxyAgent = require('https-proxy-agent');
 const { Telegraf } = require('telegraf');
 const schedule = require('node-schedule');
 const cheerio = require('cheerio');
@@ -41,7 +42,11 @@ bot.launch();
 // Функция для проверки встреч на сайте
 const checkMeetings = async () => {
     try {
-        const response = await fetch(config.TARGET_URL);
+        // Настройка прокси для подключения через испанский IP-адрес
+        const proxy = 'https://icp.administracionelectronica.gob.es/icpplus/index.html'; // Замените на реальный адрес и порт испанского прокси
+        const agent = new HttpsProxyAgent(proxy);
+
+        const response = await fetch(config.TARGET_URL, { agent });
         const body = await response.text();
         const $ = cheerio.load(body);
 
