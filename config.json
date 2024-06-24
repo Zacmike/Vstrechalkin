@@ -1,0 +1,5 @@
+{
+    "TELEGRAM_BOT_TOKEN": "7457637690:AAG5o7iQodvnI9-N7qWsKHMnNQSXG0XjjWI",
+    "CHECK_INTERVAL_MINUTES": 3,
+    "TARGET_URL": "https://icp.administracionelectronica.gob.es/icpplus/index.html"
+  }
