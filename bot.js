@@ -43,12 +43,14 @@ bot.launch();
 const checkMeetings = async () => {
     try {
         // Настройка прокси для подключения через испанский IP-адрес
-        const proxy = '82.223.165.28:8352'; // Замените на реальный адрес и порт прокси-сервера
+        const HttpsProxyAgent = require('https-proxy-agent');
         const agent = new HttpsProxyAgent({
-            host: '82.223.165.28',
-            port: 8352,
-            protocol: 'https'
-        });
+            host:"82.223.165.28",
+            port: 8352
+  // Здесь укажите параметры прокси, например:
+  // host: 'your-proxy-host',
+  // port: 8080
+});
 
         const response = await fetch(config.TARGET_URL, { agent });
         const body = await response.text();
