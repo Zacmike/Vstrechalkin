@@ -1,0 +1,4 @@
+2024-06-30T21:41:43.624Z info: Browser initialized
+2024-06-30T21:42:04.759Z error: Error navigating: net::ERR_CONNECTION_TIMED_OUT at https://icp.administracionelectronica.gob.es/icpplus/index.html
+2024-06-30T21:42:04.760Z error: Bot run failed: net::ERR_CONNECTION_TIMED_OUT at https://icp.administracionelectronica.gob.es/icpplus/index.html
+2024-06-30T21:42:07.047Z info: Browser closed

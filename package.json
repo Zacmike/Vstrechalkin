@@ -1,18 +1,24 @@
 {
-  "name": "meeting-tracker-bot",
+  "name": "cita-bot",
   "version": "1.0.0",
-  "type": "module",
-  "main": "bot.js",
+  "description": "Bot for automating appointment scheduling on Spanish government website",
+  "main": "index.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "Your Name",
+  "license": "ISC",
   "dependencies": {
-    "axios": "^1.7.2",
-    "cheerio": "^1.0.0-rc.10",
-    "https-proxy-agent": "^5.0.0",
-    "node-fetch": "^3.2.0",
-    "node-schedule": "^2.1.0",
-    "puppeteer": "^22.12.1",
-    "telegraf": "^4.4.2"
+    "axios": "^0.24.0",
+    "dotenv": "^16.4.5",
+    "puppeteer": "^10.4.0",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
